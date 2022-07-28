@@ -1,0 +1,209 @@
+.cases-content{
+  margin: 0 auto;
+
+  @include md-sm{
+    width: 100%;
+  }
+  
+  @include md-min{
+    width: 766px;
+  }
+
+}
+
+.cases{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item{
+    background: $color-white;
+    border: 1px solid $color-rain;
+    box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @include md-sm{
+      height: 145px;
+      width: 145px;
+    }
+    
+    @include md-min{
+      height: 165px;
+      width: 165px;
+    }
+
+    &:hover{
+      background: $color-white;
+      border: 1px solid $color-sand;
+      box-shadow: -2px 7px 18px -5px rgba(48, 45, 38, 0.3);
+      border-radius: 20px;
+      transform: scale(1.1);
+    }
+  }
+
+  &__img{
+    height: 60%;
+    margin-top: calc($gap / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__description{
+    text-align: center;
+    margin: 0;
+    max-width: 128px;
+
+    @include md-sm{
+      font-size: 1em;
+    }
+    
+    @include md-min{
+      font-size: 0.777em;
+    }
+  }
+}
+
+.cases-answer{
+  margin-top: calc($gap / 2);
+  position: relative;
+  height: 200px;
+  visibility: hidden;
+
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    font-size: 0.777em;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  &__text{
+    width: 320px;
+
+    & ul{
+      padding-left: $gap * 1.5;
+
+      & li{
+        margin: ($gap * 0.5) 0;
+      }
+    }
+  }
+}
+
+.cases .active{
+  background: $color-white;
+  border: 1px solid $color-sand;
+  box-shadow: -2px 7px 18px -5px rgba(48, 45, 38, 0.3);
+  border-radius: 20px;
+  transform: scale(1.1);
+}
+
+.cases-answer .active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.first{
+  padding: 64px 35px 34px 38px;
+  width: 266px;
+  background: no-repeat url(../img/insurance-case-1.png);
+  background-size: 100%;
+  background-position: center;
+  height: 100%;
+  margin-top: -20px;
+
+  & p {
+    margin-bottom: $gap * 1.25;
+  }
+
+  & a {
+    color: $color-dark-blue;
+    font-size: 1.5em;
+  }
+}
+
+.second{
+  background: no-repeat url(../img/insurance-case-2.png);
+  background-size: 100%;
+  background-position: center;
+  width: 100%;
+  height: 241px;
+  padding: 64px 27px 24px 33px;
+  margin-top: 5px;
+
+  & a {
+    color: $color-dirty-gold;
+    text-decoration: underline;
+  }
+}
+
+.third{
+  background: no-repeat url(../img/insurance-case-3.png);
+  background-size: cover;
+  background-position: center;
+  width: 426px;
+  height: 241px;
+  padding: 85px 41px 54px 65px;
+  right: 0px;
+  margin-top: -5px;
+
+  & a {
+    color: $color-dirty-gold;
+    text-decoration: underline;
+  }
+
+  & li:last-child{
+    & a{
+      margin-left: 10px;
+      font-weight: 500;
+    }
+    }
+}
+
+.fourth{
+  background: no-repeat url(../img/insurance-case-4.png);
+  background-position: center;
+  
+  @include md-sm{
+    background-size: contain;
+    width: 350px;
+    height: 240px;
+    right: 0px;
+    top: -15px;
+  }
+  
+  @include md-min{
+    background-size: cover;
+    right: -55px;
+    width: 459px;
+    height: 241px;
+    padding: 106px 73px 60px 73px;
+  }
+
+  & button{
+    height: 75px;
+
+    @include md-sm{
+      width: 250px;
+      gap: 15px;
+      position: absolute;
+      right: 45px;
+      bottom: 75px;
+    }
+    
+    @include md-min{
+      width: 313px;
+      gap: 27px;
+    }
+  }
+}

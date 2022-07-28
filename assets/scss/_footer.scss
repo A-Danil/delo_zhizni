@@ -1,0 +1,299 @@
+.footer{
+  background-color: $color-rain;
+  position: relative;
+
+  @include md{
+    padding-top: $gap * 2;
+    padding-bottom: $gap;
+  }
+  
+  @include md-min{
+    padding-top: $gap * 4.2;
+    padding-bottom: $gap * 2;
+  }
+
+  &::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $color-dark-gray;
+    left: 0;
+    bottom: 125px;
+  }
+
+  &__page-info{
+    display: flex;
+
+    @include md{
+      gap: $gap *2;
+    }
+
+    @include lg-md{
+      gap: $gap;
+    }
+    
+    @include lg-min{
+      gap: $gap * 5.5;
+    }
+
+    & ul{
+      margin: 0;
+      padding: 0;
+
+      & li{
+        list-style: none;
+
+        & a{
+          color: $color-white;
+          font-size: 1em;
+          line-height: 21px;
+          display: block;
+          font-weight: 300;
+          position: relative;
+          transition: 0.5s;
+
+          @include md{
+            margin-bottom: calc($gap / 4);
+          }
+          
+          @include md-min{
+            margin-bottom: $gap;
+          }
+
+
+          &::after{
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 1px;
+            background-color: $color-dirty-gold;
+            bottom: -4px;
+            left: -50px;
+            transition: 0.5s;
+          }
+
+          &:hover{
+            color: $color-sand;
+
+            &::after{
+              width: 80%;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  &__nav-1st{
+
+    @include md{
+      width: 200px;
+    }
+    
+    @include md-min{
+      width: 189px;
+    }
+  }
+
+  &__nav-2nd{
+    @include md{
+      width: 200px;
+    }
+    
+    @include md-min{
+      width: 184px;
+    }
+  }
+
+  &__info{
+    display: flex;
+
+    @include md{
+      gap: $gap * 2;
+    }
+
+    @include lg-md{
+      gap: $gap;
+    }
+
+    @include lg-min{
+      gap: $gap * 1.75;
+    }
+  }
+
+  &__adress{
+
+    @include md-sm{
+      width: 200px;
+    }
+
+    @include lg-md{
+      width: 240px;
+    }
+
+    @include lg-min{
+      width: 266px;
+    }
+
+    & p {
+      margin: 0;
+
+      &:nth-of-type(1){
+        @include md{
+          margin-bottom: $gap;
+        }
+        
+        @include md-min{
+          margin-bottom: $gap *2;
+        }
+      }
+      &:nth-of-type(2){
+        line-height: 125%;
+        margin-bottom: $gap * 1.75;
+      }
+    }
+
+    & a{
+      color: $color-dark-blue;
+      height: 55px;
+      width: 100%;
+
+      &:hover{
+        background-color: $color-sand;
+        color: $color-rain;
+      }
+    }
+  }
+
+  &__mail-adress{
+
+    @include md{
+      width: 200px;
+    }
+
+    @include lg-md{
+      width: 240px;
+    }
+
+    @include lg-min{
+      width: 277px;
+    }
+
+    & p{
+      margin: 0;
+
+      &:nth-of-type(1){
+        line-height: 21px;
+
+        @include md{
+          margin-bottom: $gap;
+        }
+        
+        @include md-min{
+          margin-bottom: $gap * 2;
+        }
+      }
+
+
+      &:nth-of-type(2){
+        color: $color-white;
+        font-weight: 300;
+        margin-bottom: $gap * 2.8;
+
+        @include md{
+          margin-bottom: 53px;
+        }
+
+        & a {
+          text-decoration: underline;
+          font-weight: 400;
+          transition: 0.5s;
+
+          &:hover{
+            color: $color-sand
+          }
+        }
+      }
+    }
+
+    & a{
+      display: block;
+      color: $color-white;
+      transition: 0.5s;
+      
+      @include md{
+        font-size: 1em;
+        line-height: 22px;
+        margin-bottom: $gap;
+      }
+      
+      @include md-min{
+        font-size: 1.333em;
+        line-height: 29px;
+        margin-bottom: $gap * 2;
+      }
+
+      &:hover{
+        color: $color-sand;
+      }
+    }
+  }
+
+  &__social{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & a {
+      width: 40px;
+      height: 40px;
+      background-color: $color-white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s;
+
+      &:hover{
+        background-color: $color-gray;
+      }
+    }
+  }
+}
+
+.footer-content{
+  display: flex;
+  flex-wrap: wrap;
+
+  @include md-sm{
+    justify-content: center;
+    gap: $gap;
+  }
+  
+  @include md-min{
+    justify-content: space-between;
+  }
+}
+
+.footer-right-content{
+  display: flex;
+  flex-direction: column;
+  color: $color-dark-gray;
+}
+
+.footer-copy{
+  font-size: 0.7777em;
+  line-height: 17px;
+  color: $color-dark-gray;
+  width: 100%;
+
+  @include md{
+    margin-top: $gap * 3;
+  }
+  
+  @include md-min{
+    margin-top: $gap * 5;
+  }
+}

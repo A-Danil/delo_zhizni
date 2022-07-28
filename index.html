@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дело жизни</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+
+        <div class="header-logo">
+          <a class="header-logo__link" href="#">
+            <img src="assets/img/icons/logo.svg" alt="Дело Жизни">
+          </a>
+        </div>
+
+        <div class="header-navbar">
+          <ul class="header-navbar__list">
+            <li class="header-navbar__item">
+              <a class="header-navbar__link" href="#">Главная</a>
+            </li>
+            <li class="header-navbar__item">
+              <a class="header-navbar__link" href="#">О нас</a>
+            </li>
+            <li id="help" class="header-navbar__item close-help">
+              <div class="header-navbar__link">Помощь <i class="fa-solid fa-chevron-up"></i>
+                <div class="help">
+                  <ul>
+                    <li>
+                      <a href="#">Помощь</a>
+                    </li>
+                    <li>
+                      <a href="#">Помощь</a>
+                    </li>
+                    <li>
+                      <a href="#">Помощь</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </li>
+            <li class="header-navbar__item">
+              <div class="header-navbar__choose" data-state="">
+                <div class="header-navbar__city" data-default="Санкт-Петербург">Санкт-Петербург <i
+                    class="fa-solid fa-chevron-down"></i></div>
+                <div class="header-navbar__city-list">
+                  <input id="citySelect0" class="header-navbar__city-input" type="radio" name="citySelect" checked />
+                  <label for="citySelect0" class="header-navbar__city-label">Санкт-Петербург</label>
+
+                  <input id="citySelect1" class="header-navbar__city-input" type="radio" name="citySelect" />
+                  <label for="citySelect1" class="header-navbar__city-label">Москва</label>
+
+                  <input id="citySelect2" class="header-navbar__city-input" type="radio" name="citySelect" />
+                  <label for="citySelect2" class="header-navbar__city-label">Киев</label>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <a href="tel:+74959671301" class="header-navbar__phone">+7 495 967 13 01</a>
+
+          <div class="header-navbar__account">
+            <a href="#">Личный кабинет <img src="assets/img/icons/person.svg" alt="account"></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <section class="board">
+    <div class="container">
+      <div class="board-content">
+        <div class="board-description">
+          <h3 class="board-description__title">Страховая программе <span>ЗАЩИТА + </span></h3>
+          <p class="board-description__subtitle">Одна из самых удобных и выгодных страховых программ предоставляемых
+            грожанам России и иностранным гражданам.</p>
+          <button class="board-description__btn btn--classic">купить</button>
+        </div>
+
+        <div class="board-poster">
+          <img src="assets/img/header.png" alt="Страховая программе ЗАЩИТА +">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="insurance">
+    <div class="container">
+      <h2 class="insurance__title">О страховании</h2>
+      <div class="insurance-content">
+        <div class="insurance-content__item">
+          <img src="assets/img/icons/24hours.svg" alt="24hours">
+          <p>обращения к доктору <br><span>24/7</span></p>
+        </div>
+        <div class="insurance-content__item">
+          <img src="assets/img/icons/calendar.svg" alt="calendar">
+          <p>обращения к врачам-специалистам</p>
+        </div>
+        <div class="insurance-content__item">
+          <img src="assets/img/icons/insurance.svg" alt="insurance">
+          <p>защита от несчастного случая + медицинский онлайн-сервис </p>
+        </div>
+        <div class="insurance-content__item">
+          <img src="assets/img/icons/labaratory.svg" alt="labaratory">
+          <p>лабораторные исследования </p>
+        </div>
+        <div class="insurance-content__item">
+          <img src="assets/img/icons/butterfly.svg" alt="butterfly">
+          <p>упрощенная система страхования</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="conditions">
+    <div class="container">
+      <h2 class="conditions__title">Условия которые мы предоставим Вам</h2>
+      <div class="conditions__content">
+        <div class="conditions__item">
+          <div class="conditions__img">
+            <img src="assets/img/doctors.png" alt="doctors">
+          </div>
+          <div class="conditions__description">
+            <h1>20+</h1>
+            <p>Высококвалифицированных <br>врачей к которым вы можете <br>обращаться <span>24/7</span></p>
+          </div>
+        </div>
+
+        <div class="conditions__item doctor">
+          <div class="conditions__img phone">
+            <img src="assets/img/iphone.png" alt="iphone">
+          </div>
+          <div class="conditions__description best-doctor">
+            <img src="assets/img/icons/star.svg" alt="star">
+            <h4>BestDoctor</h4>
+            <p>Доступ в один из лучших <br>медицинских сервисов в России</p>
+          </div>
+        </div>
+
+        <div class="conditions__item">
+          <div class="conditions__img run">
+            <img class="running-person" src="assets/img/person.png" alt="person">
+          </div>
+          <div class="conditions__description sum">
+            <h1>600 000₽</h1>
+            <p>Сумма страховой защиты <br>от нещастного случая</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <h2 class="services__title">У нас есть 2 пакета услуг</h2>
+      <div class="services__content">
+        <div class="services__item offer">
+          <div class="offer-before">Что мы предлагаем:</div>
+          <p>круглосуточный колл-центр по консультациям терапевта или педиатр</p>
+          <p>консультация терапевта или педиатра по телефону или по видеосвязи</p>
+          <p>предварительная запись к выбранному узкому специалисту по телефону или через личный кабинет пациента</p>
+          <p>консультация узкого специалиста по видеосвязи</p>
+          <p>выбор лаборатории, запись на прием в лабораторию</p>
+          <p>комплексный отчет о состоянии здоровья пациента от врача после получения результатов анализов от пациента
+          </p>
+          <p>никаких чат-ботов на связи 24/7 только высококвалифицированные врачи</p>
+          <p>удобное приложение с простым интерфейсом BestDoctor</p>
+          <div class="services__list">общие (клинические) анализы <i class="fa-solid fa-angle-down"></i>
+            <div class="list-info">
+              <ul>
+                <li>Общие анализы</li>
+                <li>Общий анализ крови</li>
+                <li>Общий анализ мочи</li>
+              </ul>
+              <p class="list__description"><b>одно исследование из списка в течение срока действия программы</b></p>
+            </div>
+          </div>
+          <div class="services__list list-open">ультразвуковые исследования <i class="fa-solid fa-angle-up"></i>
+            <div class="list-info">
+              <ul>
+                <li>УЗИ органов брюшной полости</li>
+                <li>почек</li>
+                <li>мочевого пузыря</li>
+                <li>УЗДГ сосудов (артерии и вены)</li>
+              </ul>
+              <p class="list__description"><b>одно исследование из списка в течение срока действия программы</b></p>
+            </div>
+          </div>
+          <div class="services__list">рентгенологические исследования <i class="fa-solid fa-angle-down"></i>
+            <div class="list-info">
+              <ul>
+                <li>Рентген</li>
+                <li>Рентген</li>
+                <li>Рентген</li>
+              </ul>
+              <p class="list__description"><b>одно исследование из списка в течение срока действия программы</b></p>
+            </div>
+          </div>
+          <a class="offer-btn btn--classic" href="assets/downloal/download.docx" download="">скачать полуную
+            версию <img src="assets/img/icons/download.svg" alt="download"></a>
+        </div>
+        <div class="services__item protect">
+          <div class="protect-before"><span>Защита +</span>виртуальная клиника</div>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-minus"></i></p>
+          <p><i class="fa-solid fa-minus"></i></p>
+          <p><i class="fa-solid fa-minus"></i></p>
+          <div class="protect-prize">
+            <p>10 500 руб.</p>
+            <button class="protect-btn btn--classic">купить</button>
+          </div>
+        </div>
+        <div class="services__item protect2">
+          <div class="protect2-before"><span>Защита +</span>виртуальная клиника,<br>лабораторные исследования</div>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <p><i class="fa-solid fa-check"></i></p>
+          <div class="protect2-prize">
+            <p>Супер цена <span>7 750 руб.</span></p>
+            <button class="protect2-btn btn--classic">купить</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="questions">
+    <div class="container">
+      <h2>Часто задаваемые вопросы</h2>
+      <div class="questions__list">
+
+        <div class="questions__item">
+          <div class="questions__question">
+            <div class="question__text">Сколько раз в год можно обратиться к терапевту или педиатру по данной
+              программе?</div>
+            <div><i class="fa-solid fa-angle-down"></i></div>
+          </div>
+          <div class="questions__answer">Количество обращений не ограничено в течение всего срока действия договора.
+          </div>
+        </div>
+
+        <div class="questions__item">
+          <div class="questions__question">
+            <div class="question__text">Сколько раз в год можно обратиться к узкому специалисту?</div>
+            <div><i class="fa-solid fa-angle-down"></i></div>
+          </div>
+          <div class="questions__answer">Количество обращений не ограничено в течение всего срока действия договора.
+          </div>
+        </div>
+
+        <div class="questions__item">
+          <div class="questions__question">
+            <div class="question__text">Как получить консультацию врача?</div>
+            <div><i class="fa-solid fa-angle-down"></i></div>
+          </div>
+          <div class="questions__answer">Количество обращений не ограничено в течение всего срока действия договора.
+          </div>
+        </div>
+
+        <div class="questions__item">
+          <div class="questions__question">
+            <div class="question__text">Какие врачи-специалисты представлены в сервисе, кроме терапевта и педиатра?
+            </div>
+            <div><i class="fa-solid fa-angle-down"></i></div>
+          </div>
+          <div class="questions__answer">Количество обращений не ограничено в течение всего срока действия договора.
+          </div>
+        </div>
+
+        <div class="questions__item">
+          <div class="questions__question">
+            <div class="question__text">Как получить консультацию педиатра, если возраст ребенка меньше 1 года, и
+              оформить на ребенка программу нельзя?</div>
+            <div><i class="fa-solid fa-angle-down"></i></div>
+          </div>
+          <div class="questions__answer">Количество обращений не ограничено в течение всего срока действия договора.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="insurance-case">
+    <div class="container">
+      <h2>Что делать, если произошел <br>страховой случай?</h2>
+
+      <div class="cases-content">
+        <div class="cases">
+          <div class="cases__item">
+            <div class="cases__img">
+              <img src="assets/img/icons/phone.svg" alt="phone">
+            </div>
+            <p class="cases__description">Позвоните нам</p>
+          </div>
+          <div class="cases__item active">
+            <div class="cases__img">
+              <img src="assets/img/icons/document.svg" alt="document">
+            </div>
+            <p class="cases__description">Заполните заявление</p>
+          </div>
+          <div class="cases__item">
+            <div class="cases__img">
+              <img src="assets/img/icons/status.svg" alt="status">
+            </div>
+            <p class="cases__description">Узнайте статус решения вопроса</p>
+          </div>
+          <div class="cases__item">
+            <div class="cases__img">
+              <img src="assets/img/icons/box.svg" alt="box">
+            </div>
+            <p class="cases__description">Полный архив всех условий</p>
+          </div>
+        </div>
+
+        <div class="cases-answer">
+          <div class="cases-answer__item first">
+            <div class="cases-answer__text">
+              <p>Наш номер:</p>
+              <a href="tel:+74959671301">+7 495 967 13 01</a>
+            </div>
+          </div>
+
+          <div class="cases-answer__item active second">
+            <div class="cases-answer__text">
+              <p>Заполните заявление и подготовьте <br>необходимые документы.</p>
+              <p>Направьте документы в Страховую компанию удобным для Вас способом:</p>
+              <ul>
+                <li>через <a href="#">Личный кабинет</a></li>
+                <li>по адресу: 125252, г. Москва, а/я 28</li>
+              </ul>
+            </div>
+            <div class="cases-answer__text">
+              <p>Список необходимых документов для <br>заключения договора:</p>
+              <ul>
+                <li>паспорт</li>
+                <li>заявление на страхование</li>
+                <li>иные документы – по запросу компании</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cases-answer__item third">
+            <div class="cases-answer__text">
+              <p>Узнать статус решения своего вопроса Вы <br>можете любым удобным для Вас способом:</p>
+              <ul>
+                <li>через <a href="#">Личный кабинет</a></li>
+                <li>позвонить по номеру <a href="tel:+74959671301">+7 495 967 13 01</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cases-answer__item fourth">
+            <div class="cases-answer__text">
+              <button class="btn--classic">скачать полный архив <br>всех условий <img
+                  src="assets/img/icons/download.svg" alt="download"></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="presentation">
+    <div class="container">
+      <h2>Посмотреть полную презентацию продукта</h2>
+      <a class="btn--classic" href="assets/downloal/download.docx" download="">Скачать PDF</a>
+    </div>
+  </section>
+
+  <section class="details">
+    <div class="container">
+      <h2>Уточнить детали</h2>
+      <p>Если вы не нашли ответа на свой вопрос, заполните <br>эту форму, а мы как можно быстрее ответим вам.</p>
+
+      <div class="details-content">
+        <div class="details-form">
+          <form class="form" action="" method="">
+
+            <fieldset class="fieldset-first">
+              <legend>1</legend>
+
+              <div class="form__item">
+                <label>
+                  ФИО*
+                  <input class="form__input" name="name" placeholder="Иванов Иван Иванович" minlength="2" maxlength="20"
+                    type="text">
+                </label>
+              </div>
+
+              <div class="form__item">
+                <label>
+                  Номер телефона*
+                  <input class="form__input" name="tel" placeholder="+7 (495) 453 33 41" minlength="10" maxlength="12"
+                    type="tel">
+                </label>
+              </div>
+
+              <div class="form__item">
+                <label>
+                  Email*
+                  <input class="form__input" name="email" placeholder="delolive@mail.ru" minlength="5" maxlength="15"
+                    type="email">
+                </label>
+              </div>
+
+              <div class="form__item">
+                <div class="form__region">
+                  Регион*
+                  <div class="__select" data-state="">
+                    <div class="__select__title" data-default="Санкт-Петербург">Санкт-Петербург</div>
+                    <div class="__select__content">
+                      <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
+                      <label for="singleSelect0" class="__select__label">Санкт-Петербург</label>
+
+                      <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+                      <label for="singleSelect1" class="__select__label">Москва</label>
+
+                      <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
+                      <label for="singleSelect2" class="__select__label">Киев</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form__btn">
+                <button type="reset">Очистить</button>
+                <button id="form-next" type="button" class="btn--classic">далее</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset-second">
+              <legend>2</legend>
+
+              <div class="form-second__item">
+                <label>
+                  2222*
+                  <input class="form-second__input" name="name" placeholder="Иванов Иван Иванович" minlength="2"
+                    maxlength="20" type="text">
+                </label>
+              </div>
+
+              <div class="form-second__item">
+                <label>
+                  22222*
+                  <input class="form-second__input" name="tel" placeholder="+7 (495) 453 33 41" minlength="10"
+                    maxlength="12" type="tel">
+                </label>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <!-- <div class="details-form-second"></div> -->
+
+        <div class="details-img">
+          <img src="assets/img/search.png" alt="search">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left-content">
+
+          <div class="footer__page-info">
+            <div class="footer__nav-1st">
+              <ul>
+                <li>
+                  <a href="#">Главная</a>
+                </li>
+                <li>
+                  <a href="#">О нас</a>
+                </li>
+                <li>
+                  <a href="#">Новости</a>
+                </li>
+                <li>
+                  <a href="#">Спецпредложения</a>
+                </li>
+                <li>
+                  <a href="#">Бизнес предлодения</a>
+                </li>
+                <li>
+                  <a href="#">Твое будущее</a>
+                </li>
+                <li>
+                  <a href="#">Защита себя и близких</a>
+                </li>
+                <li>
+                  <a href="#">Защита сотрудников</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav-2nd">
+              <ul>
+                <li>
+                  <a href="#">Страховая документация</a>
+                </li>
+                <li>
+                  <a href="#">Финансовые показатели</a>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+                <li>
+                  <a href="#">Карта сайта</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-right-content">
+          <div class="footer__info">
+            <div class="footer__adress">
+              <p>125252, г. Москва, <br>ул. Зорге, д. 22 А, офис 811</p>
+              <p>График работы главного офиса 125252, г. Москва,<br>ул. Зорге, д. 22 А, офис 811 <br>
+                Пн.- Чт. с 9:00 до 18:00 <br>Пт. с 9:00 до 16:45 <br>Сб-Вс выходной</p>
+              <a class="btn--classic" href="#">Как добраться</a>
+            </div>
+            <div class="footer__mail-adress">
+              <p>Адрес для почтовых отправлений:<br> 125252, г. Москва, а/я 28</p>
+              <a href="tel:+74959671301">тел.: +7 495 967 13 01</a>
+              <p>Email для связи с нами <br>
+                <a href="mailto:info@prolife.ru">info@prolife.ru</a>
+              </p>
+
+              <div class="footer__social">
+                <a href="#"><img src="assets/img/icons/vk.svg" alt="vk"></a>
+                <a href="#"><img src="assets/img/icons/telegram.svg" alt="telegram"></a>
+                <a href="#"><img src="assets/img/icons/facebook.svg" alt="facebook"></a>
+                <a href="#"><img src="assets/img/icons/instagram.svg" alt="instagram"></a>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        © 1998 – 2021 ООО СК "ДЕЛО ЖИЗНИ". Все права защищены. Полное или частичное копирование любых материалов сайта
+        запрещено. ООО СК «ДЕЛО ЖИЗНИ» осуществляет свою деятельность на основании лицензий ЦБ РФ:СЖ № 3870 от
+        24.03.2017СЛ № 3870 от 24.03.2017 Органом, осуществляющим полномочия по контролю и надзору за ООО СК «ДЕЛО
+        ЖИЗНИ» является Банк России. Адрес официального сайта Банк России - www.cbr.ru.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a61b851f05.js" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

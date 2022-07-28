@@ -1,0 +1,285 @@
+.services{
+
+  @include lg-md{
+    padding-top: $gap * 2;
+  }
+  
+  @include lg-min{
+    padding-top: $gap;
+  }
+
+  &__title{
+
+    @include md-sm{
+      margin-bottom: $gap * 4.5;
+    }
+    
+    @include md-min{
+      margin-bottom: $gap * 8.75;
+    }
+  }
+
+  &__content{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item{
+    box-shadow: 0px 2px 18px #2929291a;
+    border-radius: 10px;
+    word-wrap: break-word;
+    padding-top: $gap;
+    background-color: $color-white;
+
+    @include lg-md{
+      width: 275px;
+    }
+    
+    @include lg-min{
+      width: 365px;
+    }
+
+    & p,
+    & .services__list {
+      margin: 5px auto;
+      height: 40px;
+      font-size: 14px;
+      line-height: 17px;
+      position: relative;
+
+      @include lg-md{
+        width: 200px; 
+      }
+      
+      @include lg-min{
+        width: 250px;
+      }
+    }
+
+    & p {
+      @include lg-md{
+        height: 60px;
+      }
+
+      &:nth-of-type(3){
+        height: 55px;
+
+        @include lg-md{
+          height: 70px;
+        }
+      }
+
+      &:nth-of-type(7){
+        @include lg-md{
+          height: 75px;
+        }
+      }
+
+      &:nth-of-type(6){
+        height: 70px;
+      }
+    }
+  }
+}
+
+.offer{
+  position: relative;
+  height: 100%;
+
+  @include md-sm{
+    width: 345px;
+  }
+
+  & p,
+  & .services__list{
+    @include md-sm{
+      width: 250px;
+    }
+  }
+
+  & p::before,
+  & .services__list::before {
+    position: absolute;
+    content: "-";
+    font-size: 30px;
+    top: 0;
+    left: -20px;
+    color: black;
+  }
+}
+
+.offer-btn{
+  position: absolute;
+  bottom: -30px;
+  transform: translate(0px, 100%);
+  width: 100%;
+  color: $color-black;
+
+  @include lg-md{
+    padding: 0 20px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  & img{
+    margin-left: 27px;
+  }
+}
+
+.protect,
+.protect2{
+  text-align: center;
+  position: relative;
+  height: 100%;
+
+  @include md-sm{
+    width: 155px;
+    padding: 0 10px;
+  }
+
+  & p{
+    color: $color-dirty-gold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-of-type(10){
+      height: 170px;
+    }
+  }
+}
+
+.offer-before,
+.protect-before,
+.protect2-before{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  font-size: 1.3333em;
+  left: 0;
+  z-index: -1;
+  box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+
+  @include md-sm{
+    height: 100px;
+    top: -85px;
+  }
+  
+  @include lg-md{
+    height: 90px;
+    top: -78px;
+  }
+  
+  @include lg-min{
+    height: 120px;
+    top: -100px;
+  }
+}
+
+.offer-before{
+  background-color: $color-rain;
+}
+
+.protect-before,
+.protect2-before{
+  background-color: $color-dirty-gold;
+  font-size: 14px;
+
+  & span{
+    font-size: 1.3333em;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+.list__description{
+  position: static !important;
+}
+
+
+.services__list{
+  cursor: pointer;
+
+  & .list-info{
+    display: none;
+    width: 202px;
+    margin-left: auto;
+  }
+
+  & ul {
+    padding: 0;
+  }
+  & p {
+    width: 202px;
+  }
+}
+
+.protect-prize,
+.protect2-prize{
+  padding-top: $gap;
+  padding-bottom: 32px;
+}
+
+.protect-prize p {
+    margin: 0 auto;
+    color: $color-black;
+    font-size: 1.3333em;
+    line-height: 29px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.protect2-prize p {
+  margin: 0 auto;
+  color: red;
+  font-size: 1em;
+  line-height: 21px;
+
+  @include md{
+    flex-direction: column;
+  }
+
+  & span{
+    font-size: 1.333em;
+    line-height: 29px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    @include lg-md{
+      margin-left: calc($gap / 2);
+    }
+    
+    @include lg-min{
+      margin-left: $gap * 1.5;
+    }
+  }
+}
+
+.protect-btn,
+.protect2-btn{
+  margin: $gap * 2.5 auto 0 auto;
+  
+  @include md{
+    width: 100%;
+  }
+  
+  @include md-min{
+    width: 165px;
+  }
+}
+
+
+.list-open{
+  height: 170px !important;
+
+  & .list-info{
+    display: block;
+  }
+}

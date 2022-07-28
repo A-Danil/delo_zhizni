@@ -1,0 +1,100 @@
+.board{
+  padding-top: $gap * 1.5;
+}
+
+.board-content{
+  min-height: 500px;
+  display: flex;
+  box-shadow: 2px 2px 5px #141d3d26, -2px -2px 5px #141d3d26;
+  border-radius: 30px;
+  padding: 0 $gap;
+
+  @include md{
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  @include lg-md{
+    align-items: center;
+  }
+}
+
+.board-description{
+
+  @include lg-md{
+    padding-top: $gap * 2.2;
+    padding-left: $gap * 2;
+  }
+
+  @include lg-min{
+    padding-top: $gap * 6.2;
+    padding-left: $gap * 4;
+  }
+
+  &__title{
+    line-height: 43px;
+    color: $color-dark-blue;
+    font-weight: normal;
+
+    @include md{
+      text-align: center;
+    }
+
+    & span{
+      font-weight: 500;
+    }
+  }
+
+  &__subtitle{
+    margin: ($gap * 1.25) 0 0 0;
+    color: $color-gray;
+    line-height: 17px;
+    
+    @include md{
+      text-align: center;
+      font-size: 1.1em;
+    }
+    
+    @include md-min{
+      font-size: 0.7777em;
+    }
+  }
+
+  &__btn{
+    width: 265px;
+
+    @include md{
+      margin: $gap * 2.25 auto $gap auto;
+    }
+    
+    @include md-min{
+      margin-top: $gap * 4.6;
+    }
+  }
+}
+
+.board-poster{
+  
+  @include lg-min{
+    margin: -7px -45px -9px 0;
+  }
+
+  & img{
+
+    @include md-sm{
+      width: 550px;
+      height: 440px;
+    }
+
+    @include lg-md{
+      width: 550px;
+      height: 440px;
+    }
+
+    @include lg-min{
+      width: 706px;
+      height: 516px;
+    }
+  }
+}

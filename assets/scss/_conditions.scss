@@ -1,0 +1,129 @@
+.conditions{
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    margin: $gap * 2 auto 0 auto;
+
+    max-width: 1077px;
+  }
+
+  &__item{
+    display: flex;
+    justify-content: center;
+
+    @include md-sm{
+      gap: $gap;
+    }
+
+    @include lg-md{
+      gap: $gap * 2;
+    }
+    
+    @include lg-min{
+      gap: $gap * 4;
+    }
+  }
+
+  &__description{
+    margin: auto 0;
+
+    & p {
+      color: $color-dark-blue;
+      font-size: 1.3333em;
+      line-height: 29px;
+      margin: calc($gap / 2) 0 0 0;
+
+      & span{
+        font-weight: 500;
+      }
+    }
+
+    & img{
+      padding: 13px;
+      border-radius: 16px;
+      border: 1px solid $color-gray;
+    }
+
+    & h4{
+      margin: 0 0 0 27px;
+    }
+  }
+}
+
+.phone{
+  text-align: center;
+  position: relative;
+  max-width: 350px;
+
+  &::after{
+    content: "";
+    position: absolute;
+    width: 97%;
+    border: 5px solid $color-dark-blue;
+    bottom: 15px;
+    left: 0;
+    border-radius: 6px;
+  }
+
+  & img{
+    width: 264px;
+    height: 474px;
+  }
+}
+
+
+.doctor{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  
+  @include lg-min{
+    margin-left: $gap * 3.75;
+  }
+
+    p{
+      margin-top: $gap * 1.5;
+    }
+}
+
+.best-doctor{
+  display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.run{
+
+  @include md-sm{
+    width: 470px;
+    height: 470px;
+  }
+
+  @include lg-md{
+    width: 600px;
+    height: 500px;
+  }
+
+  & img{
+    @include md{
+      width: 100%;
+    }
+  }
+}
+
+
+.running-person{
+
+  @include lg-min{
+    margin-top: $gap * (-4);
+  }
+}
+
+.sum{
+  
+  @include lg-min{
+    margin-left: $gap * 5;
+  }
+}
