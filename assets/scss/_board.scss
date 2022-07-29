@@ -82,6 +82,10 @@
 
   & img{
 
+    @include sm{
+      width: 100%;
+    }
+
     @include md-sm{
       width: 550px;
       height: 440px;

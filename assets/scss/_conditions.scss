@@ -4,13 +4,23 @@
     display: flex;
     flex-direction: column;
     margin: $gap * 2 auto 0 auto;
-
     max-width: 1077px;
+
+    @include sm{
+      align-items: center;
+      gap: $gap * 1.5;
+    }
   }
 
   &__item{
     display: flex;
     justify-content: center;
+
+    @include sm{
+      flex-direction: column;
+      align-items: center;
+      gap: $gap;
+    }
 
     @include md-sm{
       gap: $gap;
@@ -25,8 +35,13 @@
     }
   }
 
+
   &__description{
     margin: auto 0;
+
+    @include sm{
+      text-align: center;
+    }
 
     & p {
       color: $color-dark-blue;
@@ -46,7 +61,14 @@
     }
 
     & h4{
-      margin: 0 0 0 27px;
+
+      @include sm{
+        margin-top: calc($gap / 2);
+      }
+
+      @include sm-min{
+        margin: 0 0 0 27px;
+      }
     }
   }
 }
@@ -61,9 +83,22 @@
     position: absolute;
     width: 97%;
     border: 5px solid $color-dark-blue;
-    bottom: 15px;
-    left: 0;
     border-radius: 6px;
+    
+    @include sm{
+      bottom: 6px;
+      left: 4px;
+    }
+    
+    @include md-sm{
+      bottom: 9px;
+      left: 5px;
+    }
+
+    @include md-min{
+      bottom: 9px;
+      left: 4px;
+    }
   }
 
   & img{
@@ -84,14 +119,24 @@
   }
 
     p{
-      margin-top: $gap * 1.5;
+      @include sm{
+        margin-top: $gap;
+      }
+
+      @include sm-min{
+        margin-top: $gap * 1.5;
+      }
     }
 }
 
 .best-doctor{
   display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include sm{
+    flex-direction: column;
+  }
 }
 
 .run{

@@ -1,5 +1,17 @@
 .services{
 
+  @include xs{
+    display: none;
+  }
+
+  @include sm-xs{
+    padding-top: $gap * 2;
+  }
+
+  @include md-sm{
+    padding-top: $gap;
+  }
+
   @include lg-md{
     padding-top: $gap * 2;
   }
@@ -9,6 +21,10 @@
   }
 
   &__title{
+
+    @include sm{
+      margin-bottom: $gap * 7;
+    }
 
     @include md-sm{
       margin-bottom: $gap * 4.5;
@@ -57,6 +73,12 @@
     }
 
     & p {
+
+      @include sm{
+        height: 60px;
+        font-size: 1em;
+      }
+
       @include lg-md{
         height: 60px;
       }
@@ -64,21 +86,60 @@
       &:nth-of-type(3){
         height: 55px;
 
+        @include sm{
+          height: 90px;
+        }
+
         @include lg-md{
           height: 70px;
         }
       }
 
+      &:nth-of-type(6){
+        height: 70px;
+
+        @include sm{
+          height: 90px;
+        }
+      }
+
       &:nth-of-type(7){
+        @include sm{
+          height: 90px;
+        }
+
         @include lg-md{
           height: 75px;
         }
       }
 
-      &:nth-of-type(6){
-        height: 70px;
+    }
+  }
+
+  &__list{
+    
+    @include sm{
+      position: relative;
+    }
+
+    @include lg-md{
+      position: relative;
+    }
+
+    & i {
+      @include sm{
+        position: absolute;
+        right: -5px;
+        top: 3px;
+      }
+
+      @include lg-md{
+        position: absolute;
+        right: -5px;
+        top: 3px;
       }
     }
+
   }
 }
 
@@ -86,12 +147,28 @@
   position: relative;
   height: 100%;
 
+  @include xs{
+    width: 180px;
+  }
+
+  @include sm-xs{
+    width: 260px;
+  }
+
   @include md-sm{
     width: 345px;
   }
 
   & p,
   & .services__list{
+    @include xs{
+      width: 160px;
+    }
+
+    @include sm-xs{
+      width: 200px;
+    }
+
     @include md-sm{
       width: 250px;
     }
@@ -115,6 +192,12 @@
   width: 100%;
   color: $color-black;
 
+  @include sm{
+    padding: 0 20px;
+    align-items: center;
+    text-align: center;
+  }
+
   @include lg-md{
     padding: 0 20px;
     align-items: center;
@@ -122,7 +205,10 @@
   }
 
   & img{
-    margin-left: 27px;
+
+    @include sm-min{
+      margin-left: 27px;
+    }
   }
 }
 
@@ -131,6 +217,16 @@
   text-align: center;
   position: relative;
   height: 100%;
+
+  @include xs{
+    width: 60px;
+    padding: 0 10px;
+  }
+
+  @include sm-xs{
+    width: 120px;
+    padding: 0 10px;
+  }
 
   @include md-sm{
     width: 155px;
@@ -166,6 +262,11 @@
   border-radius: 10px;
   flex-direction: column;
   align-items: center;
+
+  @include sm{
+    height: 165px;
+    top: -135px;
+  }
 
   @include md-sm{
     height: 100px;
@@ -277,7 +378,13 @@
 
 
 .list-open{
-  height: 170px !important;
+  @include sm{
+    height: 200px !important;
+  }
+  
+  @include sm-min{
+    height: 170px !important;
+  }
 
   & .list-info{
     display: block;

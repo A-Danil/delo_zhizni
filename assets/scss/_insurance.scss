@@ -18,6 +18,11 @@
   justify-content: center;
   flex-wrap: wrap;
 
+  @include sm{
+    gap: $gap * 2.5;
+    flex-direction: column;
+  }
+
   @include md-sm{
     gap: $gap * 2.25;
   }
@@ -35,6 +40,11 @@
     user-select: none;
     align-items: center;
     position: relative;
+
+    @include sm{
+      width: 250px;
+      padding: 10px;
+    }
 
     @include md-sm{
       width: 150px;
@@ -56,15 +66,24 @@
       padding-top: 4px;
       background-color: $color-sand;
       color: white;
-      font-size: 0.777em;
-      line-height: 17px;
       text-align: center;
       border-radius: 20px 20px 0px 0px;
       width: 100%;
-      height: 50px;
       top: 0;
       transform: translate(0, -50%);
       z-index: -1;
+      
+      @include sm{
+        font-size: 1.3em;
+        line-height: 24px;
+        height: 60px;
+      }
+      
+      @include sm-min{
+        font-size: 0.777em;
+        line-height: 17px;
+        height: 50px;
+      }
     }
 
     &:nth-of-type(1)::before{
@@ -84,6 +103,11 @@
     }
 
     & img{
+
+      @include sm{
+        margin-top: $gap * 0.75;
+        width: 80px;
+      }
 
       @include md-sm{
         margin-top: $gap * 0.75;
@@ -105,11 +129,19 @@
     }
 
     & p {
-      font-size: 0.777em;
-      line-height: 17px;
       color: $color-dark-blue;
       text-align: center;
       margin: $gap 0 0 0;
+      
+      @include sm{
+        font-size: 1.5em;
+        line-height: 27px;
+      }
+      
+      @include sm-min{
+        font-size: 0.777em;
+        line-height: 17px;
+      }
 
       & span{
         font-weight: 500;

@@ -1,9 +1,5 @@
 .cases-content{
   margin: 0 auto;
-
-  @include md-sm{
-    width: 100%;
-  }
   
   @include md-min{
     width: 766px;
@@ -15,6 +11,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include sm{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $gap * 2;
+  }
 
   &__item{
     background: $color-white;
@@ -28,6 +30,11 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+
+    @include sm{
+      height: 145px;
+      width: 145px;
+    }
 
     @include md-sm{
       height: 145px;
@@ -77,6 +84,10 @@
   height: 200px;
   visibility: hidden;
 
+  @include sm{
+    position: relative;
+  }
+
   &__item{
     display: flex;
     justify-content: space-between;
@@ -116,11 +127,40 @@
 .first{
   padding: 64px 35px 34px 38px;
   width: 266px;
-  background: no-repeat url(../img/insurance-case-1.png);
-  background-size: 100%;
-  background-position: center;
   height: 100%;
   margin-top: -20px;
+  
+  @include xs{
+    border: 1px solid $color-sand;
+    box-shadow: -2px 7px 18px -5px rgba(48, 45, 38, 0.3);
+    border-radius: 20px;
+    height: 140px;
+    margin-top: calc($gap / 2);
+    padding: calc($gap / 2);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+  @include xs-min{
+    background: no-repeat url(../img/insurance-case-1.png);
+    background-size: 100%;
+    background-position: center;
+  }
+  
+
+  @include sm-xs{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 5px);
+  }
+
+  & div{
+    @include xs{
+      text-align: center;
+    }
+  }
 
   & p {
     margin-bottom: $gap * 1.25;
@@ -133,13 +173,34 @@
 }
 
 .second{
-  background: no-repeat url(../img/insurance-case-2.png);
-  background-size: 100%;
-  background-position: center;
   width: 100%;
-  height: 241px;
-  padding: 64px 27px 24px 33px;
-  margin-top: 5px;
+  
+  @include xs{
+    border: 1px solid $color-sand;
+    box-shadow: -2px 7px 18px -5px rgba(48, 45, 38, 0.3);
+    border-radius: 20px;
+    height: 220px;
+    margin-top: $gap * 1.5;
+    padding: calc($gap / 2);
+  }
+  
+  
+  @include xs-min{
+    margin-top: 5px;
+    height: 241px;
+    padding: 64px 27px 24px 33px;
+    background: no-repeat url(../img/insurance-case-2.png);
+    background-size: 100%;
+    background-position: center;
+  }
+
+  @include sm{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -25px);
+  }
+
 
   & a {
     color: $color-dirty-gold;
@@ -148,14 +209,37 @@
 }
 
 .third{
-  background: no-repeat url(../img/insurance-case-3.png);
-  background-size: cover;
-  background-position: center;
-  width: 426px;
-  height: 241px;
-  padding: 85px 41px 54px 65px;
   right: 0px;
-  margin-top: -5px;
+  
+  @include xs{
+    border: 1px solid $color-sand;
+    box-shadow: -2px 7px 18px -5px rgba(48, 45, 38, 0.3);
+    border-radius: 20px;
+    height: 150px;
+    margin-top: calc($gap / 4);
+    padding: calc($gap / 2);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  @include xs-min{
+    width: 426px;
+    margin-top: -5px;
+    height: 241px;
+    padding: 85px 41px 54px 65px;
+    background: no-repeat url(../img/insurance-case-3.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  @include sm{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 5px);
+  }
+
 
   & a {
     color: $color-dirty-gold;
@@ -171,8 +255,33 @@
 }
 
 .fourth{
-  background: no-repeat url(../img/insurance-case-4.png);
-  background-position: center;
+
+  @include xs{
+    border: 1px solid $color-sand;
+    box-shadow: -2px 7px 18px -5px rgba(48, 45, 38, 0.3);
+    border-radius: 20px;
+    height: 150px;
+    margin-top: calc($gap / 2);
+    padding: calc($gap / 2);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  @include xs-min{
+    background: no-repeat url(../img/insurance-case-4.png);
+    background-position: center;
+  }
+
+  @include sm{
+    background-size: contain;
+    width: 350px;
+    height: 240px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -5px);
+  }
   
   @include md-sm{
     background-size: contain;
@@ -192,6 +301,18 @@
 
   & button{
     height: 75px;
+
+    @include xs{
+      width: 100%;
+    }
+
+    @include sm-xs{
+      width: 250px;
+      gap: 15px;
+      position: absolute;
+      right: 45px;
+      bottom: 75px;
+    }
 
     @include md-sm{
       width: 250px;

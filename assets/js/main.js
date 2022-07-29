@@ -38,6 +38,15 @@ for (let i = 0; i < cityLabel.length; i++) {
   });
 }
 
+// ------burger menu-------
+const burger = document.querySelector('.burger');
+const navBar = document.querySelector('.header-navbar');
+
+burger.addEventListener('click', ()=>{
+  burger.classList.toggle('open');
+  navBar.classList.toggle('open-menu');
+})
+
 // ------func when we dont ckick on the HELP & CHOOSE-CITY-------
 
 function onClickClose(elem, addClass, dataState, children, displayStyle) { // вызвать в момент показа окна, где elem - окно

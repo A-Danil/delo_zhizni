@@ -2,6 +2,10 @@ header{
   height: 80px;
   background: $color-white;
   box-shadow: 0px 4px 15px rgba(49, 60, 72, 0.05);
+
+  @include sm{
+    position: sticky;
+  }
 }
 
 .header-logo{
@@ -20,7 +24,20 @@ header{
 .header-navbar{
   display: flex;
   align-items: center;
-  height: 100%;
+  transition: 0.5s;
+  
+  @include sm{
+    transform: translate(-50%, -100%);
+    position: absolute;
+    left: 50%;
+    flex-direction: column;
+    width: 100%;
+    background-color: $color-rain;
+  }
+  
+  @include sm-min{
+    height: 100%;
+  }
 
   @include lg-md{
     gap: $gap;
@@ -33,10 +50,33 @@ header{
     height: 100%;
     margin: 0;
     padding: 0;
+
+    @include sm{
+      flex-direction: column;
+      width: 100%;
+      margin-top: $gap;
+      position: relative;
+    }
+
+    &::after{
+      @include sm{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $color-dirty-gold;
+      }
+    }
   }
 
   &__item{
     list-style: none;
+
+    @include sm{
+      width: 100%;
+    }
 
     &:last-of-type{
       font-weight: 500;
@@ -46,8 +86,20 @@ header{
   &__choose{
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
+
+    &:not([data-state=""]){
+      height: 190px;
+    }
+    
+    @include sm{
+      padding: $gap 0;
+      align-items: flex-start;
+    }
+    
+    @include sm-min{
+      align-items: center;
+    }
 
     @include lg-md{
       min-width: 150px;
@@ -55,6 +107,12 @@ header{
 
     @include lg-min{
       min-width: 215px;
+    }
+
+    &:hover{
+      @include sm{
+        background-color: rgba(168, 144, 96, 0.4);
+      }
     }
 
     &[data-state="active"] {
@@ -70,11 +128,19 @@ header{
         align-items: center;
         justify-content: center;
         align-content: center;
+
+        @include sm{
+          border-top: 1px solid $color-rain;
+          width: 100%;
+        }
       }
 
       & .header-navbar__city-label + .header-navbar__city-input + .header-navbar__city-label {
         max-height: 40px;
-        border-top-width: 1px;
+        
+        @include sm-min{
+          border-top-width: 1px;
+        }
       }
     }
   }
@@ -82,12 +148,15 @@ header{
   &__city {
     display: flex;
     align-items: center;
-    
     line-height: 21px;
     transition: 0.5s;
     width: 100%;
     justify-content: center;
     cursor: pointer;
+
+    @include sm{
+      color: $color-white;
+    }
 
     @include md-sm{
       padding: $gap calc($gap / 2);
@@ -109,25 +178,38 @@ header{
     }
 
     &:hover{
-      color: $color-dirty-gold;
+      @include sm{
+        color: $color-white;
+      }
+
+      @include sm-min{
+        color: $color-dirty-gold;
+      }
     }
   }
 
   &__city-list {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    transform: translate(0px, 105%);
     display: none;
     flex-direction: column;
-    background-color: $color-white;
-    border: 1px solid #c7ccd1;
-    border-radius: 10px;
-    box-shadow: rgb(20 29 61 / 15%) 2px 2px 5px, rgb(20 29 61 / 15%) -2px -2px 5px;
     transition: all 0.3s ease-out;
     opacity: 0;
     z-index: 8;
     overflow: hidden;
+    
+    @include sm{
+      left: 50%;
+      top: 55%;
+      transform: translate(-50%, -45%);
+    }
+    
+    @include sm-min{
+      transform: translate(0px, 80%);
+      background-color: $color-white;
+      border: 1px solid #c7ccd1;
+      border-radius: 10px;
+      box-shadow: rgb(20 29 61 / 15%) 2px 2px 5px, rgb(20 29 61 / 15%) -2px -2px 5px;
+    }
 
     @include md-sm{
       width: 140px;
@@ -148,31 +230,57 @@ header{
     justify-content: center;
     padding: 10px 0;
     width: 100%;
-    height: 35px;
     transition: all 0.2s ease-out;
     cursor: pointer;
     overflow: hidden;
+
+    @include sm{
+      height: 45px;
+      color: $color-white;
+    }
+    
+    @include sm-min{
+      height: 35px;
+    }
   
     & + input + & {
       border-top: 0 solid #C7CCD160;
+      border-bottom: 0 solid #C7CCD160;
     }
   
     &:hover {
-      background-color: $color-rain !important;
-  
-      color: $color-white;
+
+      @include sm{
+        background-color: $color-dirty-gold!important;
+        color: $color-white;
+      }
+      
+      @include sm-min{
+        background-color: $color-rain !important;
+        color: $color-white;
+      }
     }
   }
 
   &__link{
     position: relative;
-    color: $color-black;
     font-size: 1em;
     line-height: 21px;
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: 0.5s;
+    
+    @include sm{
+      padding: $gap 0;
+      width: 100%;
+      justify-content: center;
+      color: $color-white;
+    }
+    
+    @include sm-min{
+      color: $color-black;
+    }
 
     @include md-sm{
       padding: calc($gap / 2) calc($gap / 2);
@@ -187,7 +295,14 @@ header{
     }
 
     &:hover{
-      color: $color-dirty-gold;
+
+      @include sm{
+        background-color: rgba(168, 144, 96, 0.4);
+      }
+      
+      @include sm-min{
+        color: $color-dirty-gold;
+      }
     }
 
     & i{
@@ -203,15 +318,44 @@ header{
 
   &__phone{
     line-height: 29px;
-    color: $color-dark-blue;
     transition: 0.5s;
+    
+    @include sm{
+      color: $color-white;
+      width: 100%;
+      text-align: center;
+      padding: $gap 0;
+      position: relative;
+    }
+    
+    @include sm-min{
+      color: $color-dark-blue;
+    }
 
-    @include md{
+    @include md-sm{
       display: none;
     }
 
+    &::after{
+      @include sm{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $color-dirty-gold;
+      }
+    }
+
     &:hover{
-      color: $color-dirty-gold;
+      @include sm{
+        background-color: $color-dirty-gold;
+      }
+
+      @include sm-min{
+        color: $color-dirty-gold;
+      }
     }
 
     @include lg-md{
@@ -226,13 +370,26 @@ header{
   }
 
   &__account{
+
+    @include sm{
+      width: 100%;
+    }
+
     & a{
       display: flex;
       align-items: center;
-      color: $color-dark-blue;
       line-height: 21px;
       font-weight: 500;
       padding: 17px 14px 17px 16px;
+      
+      @include sm{
+        color: $color-white;
+        justify-content: center;
+      }
+      
+      @include sm-min{
+        color: $color-dark-blue;
+      }
 
       @include lg-md{
         margin-left: calc($gap / 2);
@@ -240,6 +397,12 @@ header{
 
       @include lg-min{
         margin-left: $gap;
+      }
+
+      &:hover{
+        @include sm{
+          background-color: $color-dirty-gold;
+        }
       }
 
       & img{
@@ -265,28 +428,50 @@ header{
   left: 0;
   transform: translate(0, 105%);
   width: 100%;
-  background-color: $color-white;
-  border: 1px solid #c7ccd1;
-  border-radius: 10px;
-  box-shadow: rgb(20 29 61 / 15%) 2px 2px 5px, rgb(20 29 61 / 15%) -2px -2px 5px;
   overflow: hidden;
+  
+  @include sm-min{
+    background-color: $color-white;
+    border: 1px solid #c7ccd1;
+    border-radius: 10px;
+    box-shadow: rgb(20 29 61 / 15%) 2px 2px 5px, rgb(20 29 61 / 15%) -2px -2px 5px;
+  }
 
   & ul{
     padding: 0;
     margin: 0;
 
+    @include sm{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     & li{
       list-style: none;
       position: relative;
 
+      @include sm{
+        width: 100%;
+      }
+
       & a{
         position: relative;
-        color: $color-black;
         font-size: 1em;
         line-height: 21px;
         display: block;
         cursor: pointer;
         transition: 0.5s;
+        
+        @include sm{
+          padding: calc($gap / 2) 0;
+          text-align: center;
+          color: $color-white;
+        }
+        
+        @include sm-min{
+          color: $color-black;
+        }
 
         @include md-sm{
           padding: calc($gap / 2);
@@ -301,10 +486,83 @@ header{
         }
 
         &:hover{
-          background-color: $color-rain;
-          color: $color-white;
+          @include sm{
+            background-color: $color-dirty-gold;
+          }
+
+          @include sm-min{
+            background-color: $color-rain;
+            color: $color-white;
+          }
         }
       }
     }
+  }
+}
+
+.burger {
+  display: none;
+
+  @include sm{
+    display: block;
+    width: 40px;
+    height: 25px;
+    position: relative;
+    margin-right: $gap;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  
+    & span {
+      display: block;
+      position: absolute;
+      height: 5px;
+      width: 100%;
+      background: $color-rain;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+  
+      &:nth-child(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+      &:nth-child(2) {
+        top: 12px;
+        transform-origin: left center;
+      }
+      &:nth-child(3) {
+        top: 24px;
+        transform-origin: left center;
+      }
+    }
+  }
+}
+
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 8px;
+}
+
+.burger.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 7px;
+}
+
+.open-menu{
+  top: 100% !important;
+  transform: translate(-50%, 0%) !important;
+
+  & .header-navbar__item:nth-of-type(3):not(.close-help){
+    height: 190px;
   }
 }

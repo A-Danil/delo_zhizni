@@ -11,9 +11,20 @@
 }
 
 .details-content{
-  height: 719px;
   display: flex;
   align-items: center;
+  
+  @include xs{
+    margin-top: $gap * 3;
+  }
+  
+  @include xs-min{
+    height: 719px;
+  }
+
+  @include sm{
+    justify-content: center;
+  }
 
   @include md-sm{
     justify-content: center;
@@ -28,8 +39,15 @@
 
 .details-form{
   width: 435px;
-  height: 637px;
   margin-top: 6px;
+
+  @include xs{
+    height: 525px;
+  }
+  
+  @include xs-min{
+    height: 637px;
+  }
 }
 
 .form{
@@ -110,7 +128,7 @@
 }
 
 .details-img{
-  @include md-sm{
+  @include md{
     display: none;
   }
 
@@ -124,16 +142,24 @@
 }
 
 .fieldset-first{
-  background: no-repeat url(../img/Vector.png);
-  background-position: center;
-  background-size: cover;
   border: none;
   position: absolute;
-  padding: 143px 35px 0px 35px;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  margin: 0;
+
+  @include xs{
+    margin: 20px 0 0 0;
+  }
+  
+  @include xs-min{
+    background: no-repeat url(../img/Vector.png);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 143px 35px 0px 35px;
+
+  }
 
   & legend{
     display: flex;
@@ -147,8 +173,15 @@
     border: 1px solid $color-rain;
     border-radius: 50%;
     left: 50%;
-    top: 20px;
     transform: translate(-60%, 0px);
+
+    @include xs{
+      top: -60px;
+    }
+    
+    @include xs-min{
+      top: 20px;
+    }
   }
 }
 

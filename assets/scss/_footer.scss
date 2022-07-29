@@ -19,13 +19,28 @@
     height: 1px;
     background-color: $color-dark-gray;
     left: 0;
-    bottom: 125px;
+    
+    @include xs{
+      bottom: 200px;
+    }
+    
+    @include xs-min{
+      bottom: 125px;
+    }
   }
 
   &__page-info{
     display: flex;
 
-    @include md{
+    @include xs{
+      gap: $gap;
+    }
+
+    @include sm-xs{
+      gap: $gap *2;
+    }
+
+    @include md-sm{
       gap: $gap *2;
     }
 
@@ -52,6 +67,10 @@
           font-weight: 300;
           position: relative;
           transition: 0.5s;
+
+          @include xs{
+            margin-bottom: $gap;
+          }
 
           @include md{
             margin-bottom: calc($gap / 4);
@@ -88,6 +107,10 @@
 
   &__nav-1st{
 
+    @include xs{
+      width: 150px;
+    }
+
     @include md{
       width: 200px;
     }
@@ -98,6 +121,10 @@
   }
 
   &__nav-2nd{
+    @include xs{
+      width: 150px;
+    }
+
     @include md{
       width: 200px;
     }
@@ -109,6 +136,10 @@
 
   &__info{
     display: flex;
+
+    @include xs{
+      gap: $gap;
+    }
 
     @include md{
       gap: $gap * 2;
@@ -125,7 +156,11 @@
 
   &__adress{
 
-    @include md-sm{
+    @include xs{
+      width: 150px;
+    }
+
+    @include md{
       width: 200px;
     }
 
@@ -169,6 +204,10 @@
 
   &__mail-adress{
 
+    @include xs{
+      width: 150px;
+    }
+
     @include md{
       width: 200px;
     }
@@ -202,6 +241,10 @@
         font-weight: 300;
         margin-bottom: $gap * 2.8;
 
+        @include xs{
+          margin-bottom: 95px;
+        }
+
         @include md{
           margin-bottom: 53px;
         }
@@ -222,6 +265,10 @@
       display: block;
       color: $color-white;
       transition: 0.5s;
+
+      @include xs{
+        font-size: 0.8em;
+      }
       
       @include md{
         font-size: 1em;
@@ -247,14 +294,22 @@
     justify-content: space-between;
 
     & a {
-      width: 40px;
-      height: 40px;
       background-color: $color-white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: 0.5s;
+
+      @include xs{
+        width: 30px;
+        height: 30px;
+      }
+      
+      @include xs-min{
+        width: 40px;
+        height: 40px;
+      }
 
       &:hover{
         background-color: $color-gray;
@@ -266,8 +321,9 @@
 .footer-content{
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 
-  @include md-sm{
+  @include md{
     justify-content: center;
     gap: $gap;
   }
@@ -288,6 +344,10 @@
   line-height: 17px;
   color: $color-dark-gray;
   width: 100%;
+
+  @include xs{
+    margin-top: $gap * 3;
+  }
 
   @include md{
     margin-top: $gap * 3;
