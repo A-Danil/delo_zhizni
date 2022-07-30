@@ -75,8 +75,15 @@
   &__answer{
     display: none;
     background: #FFFFFF;
-    box-shadow: inset 0px 0px 13px rgb(20 29 61 / 8%);
     border-radius: 10px;
+
+    @include xs{
+      box-shadow: inset 0px 0px 13px rgb(20 29 61 / 30%);
+    }
+    
+    @include xs-min{
+      box-shadow: inset 0px 0px 13px rgb(20 29 61 / 8%);
+    }
 
     @include sm{
       font-size: 1.1em;
@@ -91,8 +98,16 @@
 }
 
 .active-question{
-    box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15), -2px -2px 5px rgba(20, 29, 61, 0.15);
-    border-radius: 10px;
-    position: relative;
-    margin-bottom: -10px;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: -10px;
+
+  @include xs{
+    box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.3), -2px -2px 5px rgba(20, 29, 61, 0.3);
+  }
+  
+  @include xs-min{
+      box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15), -2px -2px 5px rgba(20, 29, 61, 0.15);
+    }
+
 }

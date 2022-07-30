@@ -408,8 +408,9 @@ h4 {
 }
 
 .btn--classic {
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #4A607A;
+  color: #0D1C41;
   -webkit-box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
           box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
   border-radius: 6px;
@@ -1128,14 +1129,10 @@ header {
 .questions__answer {
   display: none;
   background: #FFFFFF;
-  -webkit-box-shadow: inset 0px 0px 13px rgba(20, 29, 61, 0.08);
-          box-shadow: inset 0px 0px 13px rgba(20, 29, 61, 0.08);
   border-radius: 10px;
 }
 
 .active-question {
-  -webkit-box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15), -2px -2px 5px rgba(20, 29, 61, 0.15);
-          box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15), -2px -2px 5px rgba(20, 29, 61, 0.15);
   border-radius: 10px;
   position: relative;
   margin-bottom: -10px;
@@ -1449,9 +1446,9 @@ header {
   border: 1px solid #4A607A;
   border-radius: 50%;
   left: 50%;
-  -webkit-transform: translate(-60%, 0px);
-      -ms-transform: translate(-60%, 0px);
-          transform: translate(-60%, 0px);
+  -webkit-transform: translate(-50%, 0px);
+      -ms-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
 }
 
 .fieldset-second {
@@ -1793,6 +1790,14 @@ header {
 }
 
 @media (min-width: 576px) {
+  .questions__answer {
+    -webkit-box-shadow: inset 0px 0px 13px rgba(20, 29, 61, 0.08);
+            box-shadow: inset 0px 0px 13px rgba(20, 29, 61, 0.08);
+  }
+  .active-question {
+    -webkit-box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15), -2px -2px 5px rgba(20, 29, 61, 0.15);
+            box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15), -2px -2px 5px rgba(20, 29, 61, 0.15);
+  }
   .first {
     background: no-repeat url(../img/insurance-case-1.png);
     background-size: 100%;
@@ -2292,6 +2297,10 @@ header {
   .board-description__subtitle {
     text-align: center;
     font-size: 1.1em;
+  }
+  .board-description__btn:active {
+    -webkit-box-shadow: 0px 5px 6px rgba(255, 0, 0, 0.3);
+            box-shadow: 0px 5px 6px rgba(255, 0, 0, 0.3);
   }
   .board-description__btn {
     margin: 45px auto 20px auto;
@@ -2835,6 +2844,9 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .form__btn button:nth-of-type(1) {
+    height: 47px;
+  }
 }
 
 @media (max-width: 767.8px) and (min-width: 576px) {
@@ -2898,6 +2910,14 @@ header {
   }
   .questions__text {
     width: 270px;
+  }
+  .questions__answer {
+    -webkit-box-shadow: inset 0px 0px 13px rgba(20, 29, 61, 0.3);
+            box-shadow: inset 0px 0px 13px rgba(20, 29, 61, 0.3);
+  }
+  .active-question {
+    -webkit-box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.3), -2px -2px 5px rgba(20, 29, 61, 0.3);
+            box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.3), -2px -2px 5px rgba(20, 29, 61, 0.3);
   }
   .first {
     border: 1px solid #DDD0A4;
@@ -2971,6 +2991,9 @@ header {
   }
   .fieldset-first legend {
     top: -60px;
+  }
+  .fieldset-second {
+    display: none;
   }
   .footer::after {
     bottom: 200px;

@@ -47,6 +47,8 @@ burger.addEventListener('click', ()=>{
   navBar.classList.toggle('open-menu');
 })
 
+
+
 // ------func when we dont ckick on the HELP & CHOOSE-CITY-------
 
 function onClickClose(elem, addClass, dataState, children, displayStyle) { // вызвать в момент показа окна, где elem - окно
