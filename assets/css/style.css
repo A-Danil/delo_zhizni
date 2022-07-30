@@ -2298,10 +2298,6 @@ header {
     text-align: center;
     font-size: 1.1em;
   }
-  .board-description__btn:active {
-    -webkit-box-shadow: 0px 5px 6px rgba(255, 0, 0, 0.3);
-            box-shadow: 0px 5px 6px rgba(255, 0, 0, 0.3);
-  }
   .board-description__btn {
     margin: 45px auto 20px auto;
   }
